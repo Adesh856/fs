@@ -1,12 +1,10 @@
 const express=require("express")
-var cors = require('cors')
 const {connections}=require("./db")
 const {userRouter}=require("./Routes/user.route")
 const {notesRouter}=require("./Routes/notes.route")
 const {auth}=require("./middelware/auth.middleware")
  require("dotenv").config()
  const app=express()
- app.use(cors())
 app.use(express.json())
 app.use("/user",userRouter)
 
