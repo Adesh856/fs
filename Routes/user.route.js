@@ -4,6 +4,10 @@ const {UserModel}=require("../model/user.model")
 const jwt=require("jsonwebtoken")
 const bcrypt=require("bcrypt")
 
+userRouter.get("/",(req,res)=>{
+    res.send("Hello form cyclic")
+})
+
 userRouter.post("/register",async(req,res)=>{
     const {email,password,age,location,name}=req.body
     try {
